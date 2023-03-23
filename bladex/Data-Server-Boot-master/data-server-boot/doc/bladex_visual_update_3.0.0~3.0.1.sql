@@ -1,0 +1,21 @@
+CREATE TABLE `blade_visual_record`  (
+    `id` bigint(20) NOT NULL COMMENT '主键',
+    `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '名称',
+    `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '数据地址',
+    `data_type` int(2) NULL DEFAULT NULL COMMENT '数据类型',
+    `data_method` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '数据方法',
+    `data_header` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '数据请求头',
+    `data` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '数据集',
+    `data_query` varchar(255) NULL COMMENT '数据查询',
+    `data_query_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL DEFAULT NULL COMMENT '数据查询类型',
+    `data_formatter` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NULL COMMENT '数据格式化',
+    `ws_url` varchar(255) NULL COMMENT 'ws地址',
+    `create_user` bigint(20) NULL DEFAULT NULL COMMENT '创建人',
+    `create_dept` bigint(20) NULL DEFAULT NULL COMMENT '创建部门',
+    `create_time` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
+    `update_user` bigint(20) NULL DEFAULT NULL COMMENT '修改人',
+    `update_time` datetime(0) NULL DEFAULT NULL COMMENT '修改时间',
+    `status` int(2) NULL DEFAULT NULL COMMENT '状态',
+    `is_deleted` int(2) NULL DEFAULT NULL COMMENT '是否已删除',
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='可视化数据集表';

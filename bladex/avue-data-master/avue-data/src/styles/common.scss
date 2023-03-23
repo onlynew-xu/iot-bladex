@@ -1,0 +1,403 @@
+$primary_color:#2681ff;
+$primary_bg_color: #202023;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  background:$primary_bg_color;
+  overflow: hidden;
+  font-family: "PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif!important;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+}
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: hsla(220, 4%, 58%, .3);
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+}
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: hsla(220, 4%, 58%, .3);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  user-select: none;
+}
+
+.img{
+  margin-right: 5px;
+}
+.block{
+  margin: 0 auto;
+  width:90%;
+  display: block;
+}
+
+a{
+  text-decoration: none;
+  font-size: 12px;
+  color:$primary_color;
+}
+
+.el-form-item{
+  margin-top: 10px;
+}
+.el-form-item__label{
+  color:#fff !important;
+}
+.el-form-item__label{
+  color:#859094;
+  padding-left: 20px;
+  font-size: 12px;
+}
+.el-form-item__content{
+  padding-right: 20px;
+}
+.el-form-item--mini .el-color-picker--mini, .el-form-item--mini .el-color-picker--mini .el-color-picker__trigger{
+  width: 22px;
+  height: 22px;
+}
+.el-collapse{
+  border-top:none;
+  border-bottom: none;
+}
+
+.el-collapse-item__header{
+  position: relative;
+  padding-left: 35px;
+  height: 40px;
+  line-height: 40px;
+  background: transparent;
+  color:#fbfbfb;
+  font-weight: 300;
+  font-size: 12px;
+  border-color: #282e3a;
+  &.is-active{
+    color:#fff;
+    background-color: #101618;
+  }
+}
+.el-collapse-item__arrow{
+  position: absolute;
+  left:10px;
+  line-height: 40px;
+  color:#bcc9d4;
+  &.is-active{
+    background-color: transparent;
+  }
+}
+
+.el-collapse-item__content{
+  padding: 0;
+}
+.el-collapse-item__wrap{
+  background-color:#202023;
+  border-bottom: none;
+}
+.avue-crud{
+  padding:10px 5px;
+  .el-card{
+    background-color: transparent;
+  }
+  &__menu{
+    background-color: inherit;
+  }
+  .el-table th, .el-table tr,.el-table, .el-table__expanded-cell {
+    background-color: transparent !important;
+    color:#fff !important;
+  }
+  .el-table--enable-row-hover .el-table__body tr:hover>td{
+    background-color: #333;
+  }
+  .el-table td, .el-table th.is-leaf {
+    border-color: transparent;
+  }
+  .hover-row td,.hover-row th{
+    background-color: transparent !important;
+    border-bottom: none;
+  }
+  .el-table__fixed-right::before, .el-table__fixed::before,.el-table::before{
+    display: none;
+  }
+}
+.avue-empty__desc{
+  color:#fff;
+}
+.el-pagination__total{
+  color:#fff;
+}
+.el-pagination.is-background .btn-next, .el-pagination.is-background .btn-prev, .el-pagination.is-background .el-pager li{
+  background-color:transparent;
+  color: #fff;
+}
+.el-pagination.is-background .el-pager li:not(.disabled).active{
+  background-color: transparent;
+  border:1px solid $primary_color;
+}
+
+.el-dialog{
+  background-color:$primary_bg_color;
+  &__title{
+    color:#fdfdfd;
+    font-size: 16px;
+  }
+} 
+.avue-dialog {
+  .el-dialog__title,.el-drawer__header{
+    color:#fff;
+  }
+  &__footer{
+    border-color:#333;
+    background-color: #202023;
+  }
+  .el-dialog__header{
+    border-color:#333;
+  }
+}
+.el-message-box{
+  background-color:$primary_bg_color;
+  border-color: $primary_bg_color;
+  &__title{
+    color:#fff;
+  }
+}
+
+.el-button{
+  border-radius: 5px;
+}
+.el-button--default{
+  background-color: transparent;
+  color:#859094;
+  border-color:#859094;
+  &:hover,&:focus{
+    color: #fff;
+    background-color: #2f3f62;
+    border-color: #859094;
+  }
+}
+.el-button--primary{
+  background-color: transparent;
+  color:$primary_color;
+  border-color:$primary_color;
+  &:hover,&:focus{
+    color: #fff;
+    background-color: #2f3f62;
+    border-color: #4f9eff;
+  }
+}
+.el-button--danger{
+  background-color: transparent;
+  color:#f56c6c;
+  border-color:#f56c6c;
+  &:hover,&:focus{
+    color: #fff;
+    background-color: #2f3f62;
+    border-color: #f56c6c;
+  }
+}
+.el-button--success{
+  background-color: transparent;
+  color:#67C23A;
+  border-color:#67C23A;
+  &:hover,&:focus{
+    color: #fff;
+    background-color: #2f3f62;
+    border-color: #67C23A;
+  }
+}
+
+.el-textarea__inner,.el-input__inner{
+  background-color: #36373b;
+  color:rgba(255, 255, 255, 0.82);
+  border-color:#18181c;
+  &:hover{
+    border-color: #424246;
+  }
+  &:focus,&:active{
+    border-color: $primary_color;
+  }
+}
+.el-input-group__append, .el-input-group__prepend{
+  background-color: #36373b;
+  border-color:transparent;
+}
+.el-input.is-disabled .el-input__inner{
+  background-color: #36373b;
+  color:rgba(255, 255, 255, 0.82);
+  border-color:transparent;
+}
+.el-input-number.is-controls-right .el-input__inner{
+  padding-right: 40px;
+}
+.el-input-number.is-controls-right .el-input-number__increase,
+.el-input-number.is-controls-right .el-input-number__decrease,
+.el-input-number__decrease, .el-input-number__increase{
+  border-color:transparent;
+  background-color: transparent;
+}
+.el-slider__bar{
+  background-color: $primary_color;
+}
+.el-slider__button{
+  width: 8px;
+  height: 8px;
+}
+.el-slider__button{
+  border-color: #fff;
+}
+.el-slider__button-wrapper{
+  top:-16px;
+}
+.el-slider__bar,.el-slider__runway{
+  height: 4px;
+}
+.el-switch__core,.el-slider__runway{
+  background-color:#36373b;
+  border-color: transparent;
+}
+.el-switch.is-checked .el-switch__core {
+  border-color: $primary_color;
+  background-color: $primary_color;
+}
+.el-radio__label{
+  font-size: 12px;
+  line-height: 25px;
+}
+.el-radio-group{
+  margin-bottom: 10px;
+}
+.el-radio__input.is-checked+.el-radio__label{
+  color:$primary_color;
+}
+.el-radio__input.is-checked .el-radio__inner{
+  border-color: $primary_color;
+  background: $primary_color;
+}
+.el-select .el-tag{
+  background-color:$primary_bg_color;
+  border-color:#202023;
+  color:#e4e4e4;
+}
+.el-select:hover .el-input__inner{
+  border-color: #424246;
+}
+.el-select-dropdown.is-multiple .el-select-dropdown__item.selected.hover{
+  background-color: initial;
+  color:#fff;
+}
+.el-select-dropdown.is-multiple .el-select-dropdown__item.selected{
+  background-color: initial;
+  color:#fff;
+}
+.el-select-dropdown {
+  border-radius: 0;
+  border:none;
+  color: #bcc9d4;
+  background-color: #27343e;
+  color: #bcc9d4;
+}
+.el-select-dropdown__item{
+  font-size: 12px;
+}
+.el-select-dropdown__item.selected,.el-select-dropdown__item.hover{
+  font-weight: normal;
+  background-color: rgba(0,192,222,.1);
+  color: #fff;
+}
+
+.el-color-picker--mini .el-color-picker__trigger{
+  width: 24px;
+  height: 24px;
+  border:none;
+}
+
+.menu__tabs{
+  box-sizing: border-box;
+  .el-tabs__header{
+    margin-bottom: 2px;
+    background: #161618;
+  }
+  .el-tabs__item{
+    padding-left: 5px !important;
+    padding:0 5px;
+    color:#fff;
+    font-size: 12px;
+    box-sizing: border-box;
+    i{
+      margin-right: 5px;
+    }
+  }
+  .is-active {
+    color: #fff;
+    background-color: #373739;
+    box-sizing: border-box;
+    font-weight: bold;
+  }
+  .el-tabs__nav-wrap::after,.el-tabs__active-bar{
+    display: none;
+  }
+}
+.avue-tip-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: $primary_color;
+  padding: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 40px;
+}
+.refer-select {
+  left: 200px;
+  top: 200px;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border: 1px solid $primary_color;
+  background-color: #2f3f62;
+  border-radius: 5px;
+  z-index: 1024;
+  opacity: 0.4;
+}
+.editor-fullscreen{
+    position: fixed!important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%!important;
+    z-index: 1003;
+    padding: 20px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #333;
+}
